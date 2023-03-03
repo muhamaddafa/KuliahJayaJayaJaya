@@ -1,0 +1,16 @@
+NIM     : 00000077651
+Nama    : Muhamad Dafa
+Jurusan : Informatika
+
+NIM     : 00000075059
+Nama    : Adinda Ratu Zahra
+Jurusan : Manajemen
+
+NIM     : 00000012345
+Nama    : Mundut Mustopa
+Jurusan : Sistem Informasi
+
+NIM     : 00000054321
+Nama    : Udin Ahmad
+Jurusan : DKV
+
