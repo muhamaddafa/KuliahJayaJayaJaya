@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875em;
+    margin: 0;
+}
+
+.text-kontak {
+    margin-top: 20px;
+    margin-bottom: -5px;
+}
+
+#logo {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    color: #c47334;
+    text-shadow: 2px 2px 2px #FEBE8C;
+    text-align: center;
+    margin: 0.875em 0 0 0;
+}
+
+#nav {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#nav li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 1.25em;
+}
+
+#nav li a {
+    font-weight: 700;
+    color: #FEBE8C;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: 0.1s ease-in-out;
+}
+
+#nav li a:hover {
+    font-weight: 700;
+    font-size: 1.25em;
+    color: #c47334;
+    text-decoration: none;
+    border-bottom: 2px solid #c47334;
+    transition: 0.1s ease-in-out;
+}
+
+.button {
+    background-color: #FEBE8C;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 1em;
+    border: solid #c47334;
+    color: #c47334;
+    padding: 0.75em 0.75em 0.75em 0.75em;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #c47334;
+    border: solid #FEBE8C;
+    color: #FEBE8C;
+}
+
+input[type="text"] {
+    background-color: #FEBE8C;
+    border-radius: 0.25em;
+    border: 1px solid #c47334;
+    width: 99%;
+}
+
+#nav-porto li {
+    display: inline-block;
+    list-style: none;
+    border: 1.25em solid #FEBE8C;
+}
+
+#nav-porto li:hover {
+    border: 1.25em solid #c47334;
+}
+
+.servis-table tr td {
+    padding-right: 2em;
+    padding-left: 0.75em;
+    background-color: #ffd7b9;
+}
+
+.kategori {
+    background-color: #c47334;
+}
+
+.judul {
+    background-color: #FEBE8C;
+}
+
+table, td, th {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading-category {
+    text-align: center;
+}
+
+#nav-porto {
+    padding: 0;
+    margin: 2em 0 2em 0;
+    text-align: center;
+}
+
+.table-kontak {
+    margin-bottom: 2em;
+}
+
+.center {
+    text-align: center;
+}

@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding-top: 100px;
+    background-color: #E9F1FA;
+    color: rgb(33, 33, 94);
+}
+
+.btn-primary {
+    padding: 14px 48px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 90px;
+    font-weight: 700;
+    color: rgb(33, 33, 94);
+    transition: 0.4s;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #00ABE4;
+}
+
+.navbar-brand img {
+    max-width: 54px;
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+
+.nav-item a {
+    transition: 0.2s;
+    color: white;
+}
+/* Akhir Navbar */
+
+/* Client */
+.img-client img {
+    max-width: 100px;
+}
+/* Akhir Client */
+
+/* Banner - Highlight */
+.banner img, .h-item img {
+    box-shadow: 1px 10px 15px 0px rgba(0, 0, 0, 0.2);
+}
+/* Akhir Banner - Highlight */
+
+
+/* Testimonials */
+.cards {
+    box-shadow: 1px 10px 15px 0px rgba(0,0,0,0.12);
+    background-color: white;
+}
+
+.cards-links-img img {
+    width: 95px;
+    border-radius: 50%;
+}
+
+.cards-links-text h3, .cards-links-text p {
+    margin-top: 24px;
+}
+/* Akhir Testimonials */
+
+/* Subscribe */
+.subscribe {
+    background-color: #00ABE4;
+}
+
+.email-field {
+    width: 90%;
+    height: 30px;
+    text-align: center;
+    border: 23px solid rgb(33, 33, 94);
+}
+
+::placeholder {
+    opacity: 0.5;
+}
+/* Akhir Subscribe */
+
+/* Footer */
+.gambar img {
+    width: 40px;
+    margin-left: 1rem;
+}
+
+.informasi-perusahaan h3, .informasi-perusahaan p {
+    margin: 0;
+}
+
+.email-field {
+    height: 30px;
+    border: 0px;
+}
+/* Akhir Footer */
+
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 120px;
+    }
+
+/* Navbar */
+    .nav-item a {
+        margin: 0 32px;
+    }
+
+    .nav-item a:hover {
+        border-bottom: 2px solid #ffffff;
+        font-weight: 700;
+        transition: 0.2s;
+    }
+    
+    .navbar {
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 5rem;
+        box-shadow: 1px 10px 15px 0px rgba(0,0,0,0.12);
+        padding: 0.5rem 1rem;
+    }
+/* Akhir Navbar */ 
+
+/* Subscribe */
+    .email-field {
+        width: 60%;
+    }
+/* Akhir Subscribe */
+}
+
