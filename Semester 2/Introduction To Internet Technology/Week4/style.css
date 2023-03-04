@@ -42,7 +42,7 @@ body {
 /* Akhir Navbar */
 
 /* Banner - Highlight */
-.banner img, .h-item img {
+.carousel-inner {
     box-shadow: 1px 10px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
