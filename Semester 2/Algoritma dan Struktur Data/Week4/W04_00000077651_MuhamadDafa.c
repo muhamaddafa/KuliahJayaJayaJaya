@@ -2,16 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct Mahasiswa 
-{
+typedef struct Mahasiswa {
     char nim[12];
     char nama[100];
     char jurusan[60];
     struct Mahasiswa *next;
-}Mahasiswa;
+}Mahasiswa; // Deklarasi Struct
 
-Mahasiswa *node, *head;
+Mahasiswa *node, *head, *tail; // Variable Global
 
+// Function Membuat List Baru
 Mahasiswa *createNode () {
     Mahasiswa *newNode = (Mahasiswa*) malloc(sizeof(Mahasiswa));
     char nim[12], nama[100], jurusan[60];
@@ -26,6 +26,7 @@ Mahasiswa *createNode () {
     return newNode;
 }
 
+// Function Hapus Data Pertama
 void hapusDataPertama () {
     Mahasiswa *trash;
     trash = head;
@@ -33,7 +34,8 @@ void hapusDataPertama () {
     free(trash);
 }
 
-void hapusSemuaData (Mahasiswa *head) {
+// Function Hapus Semua Data
+void hapusSemuaData () {
     Mahasiswa *temp;
     temp = head;
     int i = 1;
@@ -43,17 +45,45 @@ void hapusSemuaData (Mahasiswa *head) {
         temp = temp->next;
         i++;
     }
-
     head = NULL;
 }
 
+void hapusDataNIM () {
+    Mahasiswa *trash, *temp;
+    char nomorInduk [12];
+    trash = head;
+
+    printf("Masukkan NIM: "); scanf("%[^\n]", &nomorInduk); fflush(stdin);
+
+    if (strcmp(trash->nim, nomorInduk) == 0) {
+        head = head->next;
+        free(trash);
+    } else {
+        while (strcmp(trash->next->nim, nomorInduk) == 1) {
+            trash = trash->next;
+        }
+
+        if (trash->next->next != NULL) {
+            temp =  trash;
+            trash = trash->next;
+            temp->next = trash->next;
+            free(trash);
+        } else {
+            tail = trash;
+            trash = tail->next;
+            tail->next = NULL;
+            free(trash);
+        }
+    }
+}
+
+// Function Print Data Mahasiswa
 void printLL (Mahasiswa *head) {
     Mahasiswa *temp;
     temp = head;
     int i = 1;
 
     while (temp != NULL) {
-        printf("\n");
         printf("Data ke %d\n", i);
         printf("NIM     : %s\n", temp->nim);
         printf("Nama    : %s\n", temp->nama);
@@ -63,61 +93,66 @@ void printLL (Mahasiswa *head) {
     }
 }
 
-
+// Function Utama
 int main () {
     int pilihan;
     head = NULL;
 
-    printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
-    printf("Welcome To Student Data Base\n");
-    printf("Masukkan Data Pertama\n");
-    node = createNode();
-    head = node;
-
-    Mahasiswa *tail;
-    tail = node;
-
-    printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
+    system("cls"); // Untuk Clear Terminal
     menu:
     printf("Welcome To Student Data Base\n");
     printf("1. Insert New Student\n2. Print Students Data\n3. Delete All Data\n4. Delete First Data\n5. Delete Data by NIM\n6. Exit\nChoose: ");
     scanf("%d", &pilihan); fflush(stdin);
+    system("cls");
 
-    switch (pilihan) {
-    case 1:
-        node = createNode();
-        tail->next = node;
-        tail = node;
+    if (pilihan == 1) {
+        if (head == NULL) {
+            node = createNode();
+            head = node;
+            tail = node;
+        } else {
+            node = createNode();
+            tail->next = node;
+            tail = node;
+            tail->next = NULL;
+        }
         printf("Press Any Key To Continue");
         getchar();
-        printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
+        system("cls"); // Untuk Clear Terminal
         goto menu;
-    case 2:
+    } else if (pilihan == 2) {
         if (head == NULL) {
-            printf("-- DATA KOSONG --\n\n");
+            printf("-- DATA KOSONG --\n");
         } else {
             printLL(head);
         }
         printf("Press Any Key To Continue");
         getchar();
-        printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
+        system("cls"); // Untuk Clear Terminal
         goto menu;
-    case 3:
-        hapusSemuaData(head);
+    } else if (pilihan == 3) {
+        hapusSemuaData();
         printf("Semua Data Telah Terhapus....\n");
         printf("Press Any Key To Continue");
         getchar();
-        printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
+        system("cls"); // Untuk Clear Terminal
         goto menu;
-    case 4:
+    } else if (pilihan == 4) {
         hapusDataPertama();
         printf("Data Pertama Terhapus....\n");
         printf("Press Any Key To Continue");
         getchar();
-        printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
+        system("cls"); // Untuk Clear Terminal
         goto menu;
-    default:
-        break;
+    } else if (pilihan == 5) {
+        hapusDataNIM();
+        printf("Data Telah Terhapus....\n");
+        printf("Press Any Key To Continue");
+        getchar();
+        system("cls"); // Untuk Clear Terminal
+        goto menu;
+    } else {
+        return 0;
     }
-    return 0;
 }
+
