@@ -98,12 +98,12 @@ int main () {
     int pilihan;
     head = NULL;
 
-    system("cls"); // Untuk Clear Terminal
+    printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
     menu:
     printf("Welcome To Student Data Base\n");
     printf("1. Insert New Student\n2. Print Students Data\n3. Delete All Data\n4. Delete First Data\n5. Delete Data by NIM\n6. Exit\nChoose: ");
     scanf("%d", &pilihan); fflush(stdin);
-    system("cls");
+    printf("\033[2J\033[1;1H");
 
     if (pilihan == 1) {
         if (head == NULL) {
@@ -118,7 +118,7 @@ int main () {
         }
         printf("Press Any Key To Continue");
         getchar();
-        system("cls"); // Untuk Clear Terminal
+        printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
         goto menu;
     } else if (pilihan == 2) {
         if (head == NULL) {
@@ -128,28 +128,28 @@ int main () {
         }
         printf("Press Any Key To Continue");
         getchar();
-        system("cls"); // Untuk Clear Terminal
+        printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
         goto menu;
     } else if (pilihan == 3) {
         hapusSemuaData();
         printf("Semua Data Telah Terhapus....\n");
         printf("Press Any Key To Continue");
         getchar();
-        system("cls"); // Untuk Clear Terminal
+        printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
         goto menu;
     } else if (pilihan == 4) {
         hapusDataPertama();
         printf("Data Pertama Terhapus....\n");
         printf("Press Any Key To Continue");
         getchar();
-        system("cls"); // Untuk Clear Terminal
+        printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
         goto menu;
     } else if (pilihan == 5) {
         hapusDataNIM();
         printf("Data Telah Terhapus....\n");
         printf("Press Any Key To Continue");
         getchar();
-        system("cls"); // Untuk Clear Terminal
+        printf("\033[2J\033[1;1H"); // Untuk Clear Terminal
         goto menu;
     } else {
         return 0;

@@ -1,0 +1,9 @@
+1. Rehashing dilakukan untuk memperbaiki kinerja tabel hash yang sudah ada banyak data dengan cara memperbesar ukuran tabel hash, ini memperkecil kemungkinan terjadinya collision.
+2. Berdasarkan gambar diatas, rehashing dilakukan ketika jumlah data sudah mencapai 70% dari kapasitas hash table.
+3. - Memindahkan data ke dalam temporary array
+   - Menghapus hash table dengan free
+   - Membuat hash table baru dengan ukuran 2 kali lebih besar
+   - Memindahkan data dari temporary array ke hash table baru
+   - Menghapus Temporary Array
+4. Sieve of Eratosthenes merupakan sebuah algoritma untuk menemukan semua bilangan prima hingga batas tertentu.
+5. Size yang baru tidak harus mengikuti bilangan prima, tetapi sebaiknya mengikuti bilangan prima agar kemungkinan terjadinya collision lebih kecil.
