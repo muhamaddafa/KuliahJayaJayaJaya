@@ -1,0 +1,161 @@
+<!-- MUHAMAD DAFA  -->
+<!-- 00000077651 - WEEK 7 -->
+
+<!DOCTYPE html>
+<html lang="en"
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Muhamad Dafa - 00000077651 - Week7</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://code.jquery.com/jquery-3.6.4.js"
+			integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+			crossorigin="anonymous"
+		></script>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar container-fluid">
+			<div class="container justify-content-center">
+				<a class="navbar-brand" href="#">Chatty</a>
+			</div>
+		</nav>
+		<!-- Akhir Navbar -->
+
+		<!-- Chat Box -->
+		<div id="chatBox" class="chatBox"></div>
+		<!-- Akhir Chat Box -->
+
+		<!-- Message -->
+		<div id="message" class="message">
+			<hr style="margin-top: 0" />
+			<!-- Box -->
+			<div class="container">
+				<div class="row">
+					<div class="pesan col">
+						<form>
+							<div class="mb-3">
+								<label for="nama" class="form-label">Name</label>
+								<input type="text" class="form-control" id="namaPengirim" />
+							</div>
+							<div class="mb-3">
+								<label for="pesan" class="form-label">Message</label>
+								<textarea
+									class="form-control"
+									id="pesanPengirim"
+									rows="3"
+								></textarea>
+							</div>
+							<div class="button text-center">
+								<button type="button" class="btnPengirim btn-primary px-5 py-1">
+									Send
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="pesan col">
+						<form>
+							<fieldset disabled>
+								<div class="mb-3">
+									<label for="nama" class="form-label">Name</label>
+									<input
+										type="text"
+										class="form-control"
+										placeholder="Me"
+										value="Me"
+										id="namaSaya"
+									/>
+								</div>
+							</fieldset>
+							<div class="mb-3">
+								<label for="pesan" class="form-label">Message</label>
+								<textarea
+									class="form-control"
+									id="pesanSaya"
+									rows="3"
+								></textarea>
+							</div>
+							<div class="button text-center">
+								<button type="button" class="btnSaya btn-primary px-5 py-1">
+									Send
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Akhir Box -->
+		</div>
+		<!-- Akhir Message -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			$(".btnPengirim").click(function pengirimBtn() {
+				nama = $("#namaPengirim").val();
+				pesan = $("#pesanPengirim").val();
+
+				// Isi Pesan
+				var isiPesan = $("<div/>", {
+					class: "isiPesanPengirim",
+				});
+				var pesanContent = $("<div/>", {
+					class: "pesanContent container",
+				}).appendTo(isiPesan);
+				var valNama = $("<span/>", {
+					class: "fw-bold",
+				})
+					.text(nama)
+					.appendTo(pesanContent);
+				var br = $("<br/>").appendTo(pesanContent);
+				var valPesan = $("<p/>", {
+					class: "kotakPesan",
+				})
+					.text(pesan)
+					.appendTo(pesanContent);
+
+				$("#chatBox").append(isiPesan);
+				$("#pesanPengirim").val("");
+				$("#namaPengirim").val("");
+			});
+
+			$(".btnSaya").click(function sayaBtn() {
+				var you = "you";
+				nama = $("#namaSaya").val();
+				pesan = $("#pesanSaya").val();
+
+				// Isi Pesan
+				var isiPesan = $("<div/>", {
+					class: "isiPesanSaya text-end",
+				});
+				var pesanContent = $("<div/>", {
+					class: "pesanContent container",
+				}).appendTo(isiPesan);
+				var valNama = $("<span/>", {
+					class: "fw-bold",
+				})
+					.text(nama)
+					.appendTo(pesanContent);
+				var br = $("<br/>").appendTo(pesanContent);
+				var valPesan = $("<p/>", {
+					class: "kotakPesan",
+				})
+					.text(pesan)
+					.appendTo(pesanContent);
+
+				$("#chatBox").append(isiPesan);
+				$("#pesanSaya").val("");
+			});
+		</script>
+	</body>
+</html>

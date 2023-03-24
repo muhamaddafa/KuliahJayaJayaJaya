@@ -1,0 +1,60 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #eff0f3;
+}
+
+#chatBox {
+	height: 400px;
+	overflow: scroll;
+}
+
+.kotakPesan {
+	background-color: #ff8e3c;
+	padding: 10px 10px 12px 12px;
+	margin-top: 5px;
+	display: inline-block;
+}
+
+.pesanContent {
+	padding-top: 5px;
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: 50%;
+	}
+}
+
+.btn-primary {
+	background-color: #ff8e3c;
+	border: 2px solid #ff8e3c;
+	border-radius: 10px;
+	color: #0d0d0d;
+	font-weight: bold;
+	transition: 0.2s;
+}
+
+.btn-primary:hover {
+	background-color: #fffffe;
+	border: 2px solid #ff8e3c;
+	color: #ff8e3c;
+	transition: 0.2s;
+}
+
+.message {
+	background-color: #fffffe;
+	padding-bottom: 40px;
+}
+
+.row {
+	padding-top: 10px;
+}
+
+.navbar {
+	background-color: #ff8e3c;
+	font-weight: bold;
+}
