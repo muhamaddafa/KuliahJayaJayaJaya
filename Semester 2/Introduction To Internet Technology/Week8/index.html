@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>TUGAS WEEK 8 - MUHAMAD DAFA</title>
+		<script
+			crossorigin
+			src="https://unpkg.com/react@18/umd/react.development.js"
+		></script>
+		<script
+			crossorigin
+			src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+		></script>
+		<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="text/babel">
+			var randomColor1 = Math.floor(Math.random() * 16777215).toString(16);
+			var randomColor2 = Math.floor(Math.random() * 16777215).toString(16);
+			var randomColor3 = Math.floor(Math.random() * 16777215).toString(16);
+			var randomColor4 = Math.floor(Math.random() * 16777215).toString(16);
+			var randomColor5 = Math.floor(Math.random() * 16777215).toString(16);
+			var randomColor6 = Math.floor(Math.random() * 16777215).toString(16);
+			ReactDOM.render(
+				<>
+					<h1 style={{ color: "#" + randomColor1 }}>Hello World</h1>
+					<h3 style={{ color: "#" + randomColor2 }}>My Name Is MUHAMAD DAFA</h3>
+					<h3 style={{ color: "#" + randomColor3 }}>
+						I am a handsome human being
+					</h3>
+					<h3 style={{ color: "#" + randomColor4 }}>
+						I love to learn JavaScript
+					</h3>
+					<h3 style={{ color: "#" + randomColor5 }}>
+						I am a super high quality student
+					</h3>
+					<h3 style={{ color: "#" + randomColor6 }}>
+						I am going to be a superstar
+					</h3>
+				</>,
+				document.getElementById("root")
+			);
+		</script>
+	</body>
+</html>
